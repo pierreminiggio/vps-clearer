@@ -2,7 +2,10 @@
 
 function runCommand(string $command): void
 {
-    echo date('Y-m-d H:i:s - ') . shell_exec($command);
+    $output = shell_exec($command);
+    echo date('Y-m-d H:i:s - ') . $command . ' : ' . (
+        $output ?? 'empty output'
+    ) . PHP_EOL;
 }
 
 runCommand('npm --prefix /var/www/cron/boosted-scraper stop');
