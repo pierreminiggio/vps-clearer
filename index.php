@@ -19,3 +19,5 @@ for ($i = 0; $i < 10; $i++) {
 }
 
 runCommand('npm --prefix /var/www/cron/boosted-scraper start');
+
+exit;
